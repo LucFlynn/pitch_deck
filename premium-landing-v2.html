@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The $12B Pitch Deck Agency | Pitch Deck Writers</title>
+  <meta name="description" content="We don't make pretty slides. We engineer fundraising machines. 2,000+ decks. $12B+ raised. 14-day delivery.">
+  <meta property="og:title" content="The $12B Pitch Deck Agency">
+  <meta property="og:description" content="Investor-ready pitch decks that close rounds. Built by ex-VCs.">
+  <meta name="theme-color" content="#00F5FF">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyan': '#00F5FF',
+            'cyan-dark': '#00C9D7',
+            'purple': '#9333EA',
+            'ink': '#0A0118',
+            'void': '#050010',
+          },
+          fontFamily: {
+            'display': ['Clash Display', 'system-ui', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s ease-in-out infinite',
+            'gradient': 'gradient 8s ease infinite',
+            'glow': 'glow 2s ease-in-out infinite',
+            'counter': 'counter 3s ease-out forwards',
+            'typewriter': 'typewriter 2s steps(20) forwards',
+            'slide-left': 'slideLeft 0.3s ease-out',
+            'slide-right': 'slideRight 0.3s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            glow: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(0, 245, 255, 0.5)' },
+              '50%': { boxShadow: '0 0 40px rgba(0, 245, 255, 0.8), 0 0 60px rgba(0, 245, 255, 0.4)' },
+            },
+            slideLeft: {
+              '0%': { transform: 'translateX(100px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideRight: {
+              '0%': { transform: 'translateX(-100px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            }
+          },
+          backgroundSize: {
+            '400%': '400% 400%',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #050010;
+      overflow-x: hidden;
+    }
+
+    /* Animated gradient background */
+    .hero-gradient {
+      background: linear-gradient(-45deg, #0A0118, #1a0b2e, #11071F, #090117, #00F5FF15);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    /* Glowing orb effect */
+    .glow-orb {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 245, 255, 0.3) 0%, transparent 70%);
+      filter: blur(60px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    /* Neon text effect */
+    .neon-text {
+      text-shadow:
+        0 0 10px #00F5FF,
+        0 0 20px #00F5FF,
+        0 0 30px #00F5FF,
+        0 0 40px #00C9D7;
+    }
+
+    /* 3D card effect */
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card-3d:hover {
+      transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+    }
+
+    /* Cyberpunk grid */
+    .cyber-grid {
+      background-image:
+        linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: float 20s linear infinite;
+    }
+
+    /* Liquid button */
+    .liquid-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .liquid-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .liquid-button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Holographic effect */
+    .holographic {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #00F5FF 75%, #667eea 100%);
+      background-size: 200% 200%;
+      animation: gradient 4s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Parallax scrolling effect */
+    .parallax {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Glass morphism premium */
+    .glass-premium {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Typing cursor */
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    /* Premium hover states */
+    .premium-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .premium-hover:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 245, 255, 0.3);
+    }
+
+    /* Number counter animation */
+    @property --num {
+      syntax: '<integer>';
+      initial-value: 0;
+      inherits: false;
+    }
+
+    .counter {
+      animation: counter 3s ease-out forwards;
+      counter-reset: num var(--num);
+    }
+
+    .counter::before {
+      content: counter(num);
+    }
+
+    @keyframes counter {
+      to {
+        --num: 12;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0A0118;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00F5FF, #00C9D7);
+      border-radius: 4px;
+    }
+
+    /* Magnetic button effect */
+    .magnetic {
+      transition: transform 0.2s;
+    }
+  </style>
+</head>
+
+<body class="bg-void text-white antialiased">
+
+  <!-- Animated Background Elements -->
+  <div class="fixed inset-0 -z-10">
+    <div class="glow-orb top-0 -left-1/4"></div>
+    <div class="glow-orb bottom-0 -right-1/4" style="animation-delay: 4s;"></div>
+    <div class="cyber-grid absolute inset-0 opacity-20"></div>
+  </div>
+
+  <!-- Premium Navigation -->
+  <nav class="fixed w-full top-0 z-50 glass-premium">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-4">
+          <!-- Animated Logo -->
+          <div class="relative">
+            <div class="absolute inset-0 bg-cyan blur-xl opacity-50 animate-pulse-slow"></div>
+            <div class="relative w-10 h-10 bg-gradient-to-br from-cyan to-purple rounded-lg flex items-center justify-center animate-float">
+              <span class="font-bold text-white text-lg">P</span>
+            </div>
+          </div>
+          <div>
+            <span class="font-bold text-sm tracking-[0.2em] uppercase">Pitch Deck</span>
+            <span class="block text-[10px] text-cyan tracking-[0.3em] uppercase">Writers</span>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#proof" class="text-gray-400 hover:text-cyan transition text-sm font-medium">Proof</a>
+          <a href="#method" class="text-gray-400 hover:text-cyan transition text-sm font-medium">Method</a>
+          <a href="#investment" class="text-gray-400 hover:text-cyan transition text-sm font-medium">Investment</a>
+          <div class="h-6 w-px bg-white/20"></div>
+          <a href="#qualify" class="relative liquid-button bg-gradient-to-r from-cyan to-cyan-dark text-ink px-6 py-2.5 rounded-full font-bold text-sm overflow-hidden group">
+            <span class="relative z-10">Start Your Raise →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section - Bold & Asymmetric -->
+  <section class="hero-gradient min-h-screen flex items-center relative pt-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+
+        <!-- Left Content - Spans 7 columns -->
+        <div class="lg:col-span-7 animate-slide-right">
+          <!-- Status Badge -->
+          <div class="inline-flex items-center space-x-2 mb-8">
+            <div class="flex space-x-1">
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" style="animation-delay: 0.2s"></span>
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></span>
+            </div>
+            <span class="text-xs font-mono text-cyan">ACCEPTING 5 CLIENTS THIS MONTH</span>
+          </div>
+
+          <!-- Main Headline with Dynamic Typography -->
+          <h1 class="text-5xl lg:text-7xl font-bold leading-[0.9] mb-6">
+            <span class="block text-white">We've Raised</span>
+            <span class="block holographic text-8xl lg:text-9xl font-black">$12B+</span>
+            <span class="block text-white">For Founders</span>
+            <span class="block text-2xl lg:text-3xl text-gray-400 font-normal mt-4">
+              Now It's Your Turn.
+            </span>
+          </h1>
+
+          <!-- Unique Value Prop -->
+          <div class="flex items-start space-x-4 mb-8 p-4 glass-premium rounded-lg">
+            <div class="text-4xl">🎯</div>
+            <div>
+              <p class="text-cyan font-semibold">The Difference:</p>
+              <p class="text-gray-300 text-sm">We don't make slides. We engineer fundraising systems that convert meetings to term sheets.</p>
+            </div>
+          </div>
+
+          <!-- Dual CTA -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="scrollToForm()" class="group relative bg-gradient-to-r from-cyan to-cyan-dark text-ink px-8 py-4 rounded-lg font-bold overflow-hidden premium-hover">
+              <span class="relative z-10">Start in 48 Hours →</span>
+            </button>
+            <button onclick="showProof()" class="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/5 transition">
+              See $12B Proof
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Visual - Spans 5 columns -->
+        <div class="lg:col-span-5 relative animate-slide-left">
+          <!-- Floating Stats Cards -->
+          <div class="relative h-[500px]">
+            <!-- Main stat card -->
+            <div class="absolute top-0 right-0 card-3d">
+              <div class="glass-premium rounded-2xl p-6 border border-cyan/30 animate-float">
+                <div class="flex items-baseline space-x-2">
+                  <span class="text-5xl font-bold neon-text">2,000</span>
+                  <span class="text-cyan text-sm">decks</span>
+                </div>
+                <div class="mt-2 text-gray-400 text-xs">Shipped since 2009</div>
+                <div class="mt-4 flex -space-x-2">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple to-cyan"></div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-cyan to-green-400"></div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-cyan"></div>
+                  <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs">+99</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary floating cards -->
+            <div class="absolute top-32 left-0 card-3d" style="animation-delay: 0.5s">
+              <div class="glass-premium rounded-xl p-4 border border-purple/30 animate-float">
+                <div class="text-2xl font-bold text-purple">Series A</div>
+                <div class="text-gray-400 text-xs mt-1">Average: $8.2M</div>
+              </div>
+            </div>
+
+            <div class="absolute bottom-20 right-10 card-3d" style="animation-delay: 1s">
+              <div class="glass-premium rounded-xl p-4 border border-green-400/30 animate-float">
+                <div class="flex items-center space-x-2">
+                  <span class="text-2xl">⚡</span>
+                  <div>
+                    <div class="text-sm font-bold">14 Days</div>
+                    <div class="text-xs text-gray-400">Or it's free</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live indicator -->
+            <div class="absolute bottom-0 left-0">
+              <div class="flex items-center space-x-3 glass-premium rounded-full px-4 py-2">
+                <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                <span class="text-xs font-mono text-gray-300">3 founders viewing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals - Minimalist -->
+  <section class="py-12 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between flex-wrap gap-8">
+        <div class="flex items-center space-x-2">
+          <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Trusted By</span>
+        </div>
+        <div class="flex items-center space-x-6">
+          <!-- Animated trust badges -->
+          <div class="group">
+            <div class="px-4 py-2 rounded-full border border-white/10 group-hover:border-cyan/50 transition">
+              <span class="font-bold text-white group-hover:text-cyan transition">YC</span>
+            </div>
+          </div>
+          <div class="group">
+            <div class="px-4 py-2 rounded-full border border-white/10 group-hover:border-cyan/50 transition">
+              <span class="font-bold text-white group-hover:text-cyan transition">Techstars</span>
+            </div>
+          </div>
+          <div class="group">
+            <div class="px-4 py-2 rounded-full border border-white/10 group-hover:border-cyan/50 transition">
+              <span class="font-bold text-white group-hover:text-cyan transition">500</span>
+            </div>
+          </div>
+          <div class="group">
+            <div class="px-4 py-2 rounded-full border border-white/10 group-hover:border-cyan/50 transition">
+              <span class="font-bold text-white group-hover:text-cyan transition">MIT</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="flex -space-x-2">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23667eea'/%3E%3C/svg%3E" class="w-8 h-8 rounded-full border-2 border-void" alt="Founder">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2300F5FF'/%3E%3C/svg%3E" class="w-8 h-8 rounded-full border-2 border-void" alt="Founder">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f093fb'/%3E%3C/svg%3E" class="w-8 h-8 rounded-full border-2 border-void" alt="Founder">
+          </div>
+          <span class="text-xs text-gray-400">2,000+ founders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof Section - Data Visualization -->
+  <section id="proof" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="font-mono text-cyan text-xs uppercase tracking-wider">// Performance Metrics</span>
+        <h2 class="text-4xl lg:text-5xl font-bold mt-4 mb-4">
+          Numbers Don't Lie
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Every metric below is verified. No vanity stats. Just results.</p>
+      </div>
+
+      <!-- Asymmetric Stats Grid -->
+      <div class="grid lg:grid-cols-4 gap-6">
+        <!-- Big card spanning 2 columns -->
+        <div class="lg:col-span-2 group">
+          <div class="h-full glass-premium rounded-2xl p-8 border border-cyan/20 premium-hover relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-cyan/20 rounded-full filter blur-3xl"></div>
+            <div class="relative">
+              <div class="text-6xl lg:text-7xl font-bold holographic">$12B</div>
+              <div class="text-gray-300 mt-2">Total Capital Raised</div>
+              <div class="mt-6 space-y-2">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-500">Seed</span>
+                  <span class="text-cyan">$2.1B</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-500">Series A</span>
+                  <span class="text-cyan">$5.3B</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-500">Series B+</span>
+                  <span class="text-cyan">$4.6B</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vertical cards -->
+        <div class="group">
+          <div class="h-full glass-premium rounded-2xl p-6 border border-purple/20 premium-hover">
+            <div class="text-4xl font-bold text-purple mb-2">87%</div>
+            <div class="text-gray-300 text-sm">Close Rate</div>
+            <div class="mt-4">
+              <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple to-cyan rounded-full" style="width: 87%"></div>
+              </div>
+              <div class="text-xs text-gray-500 mt-2">vs. 23% industry avg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="h-full glass-premium rounded-2xl p-6 border border-green-400/20 premium-hover">
+            <div class="text-4xl font-bold text-green-400 mb-2">14</div>
+            <div class="text-gray-300 text-sm">Day Delivery</div>
+            <div class="mt-4 space-y-1">
+              <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span class="text-xs text-gray-400">Guaranteed</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span class="text-xs text-gray-400">Or it's free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Activity Feed -->
+      <div class="mt-12 glass-premium rounded-xl p-6 border border-white/10">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm font-mono text-cyan">// Recent Activity</span>
+          <div class="flex items-center space-x-2">
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span class="text-xs text-gray-400">Live</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300">Series A deck delivered → <span class="text-white">B2B SaaS</span></span>
+            <span class="text-gray-500 text-xs">2 hours ago</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300">New engagement started → <span class="text-white">AI/ML, $5M target</span></span>
+            <span class="text-gray-500 text-xs">5 hours ago</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300">Client raised → <span class="text-green-400 font-bold">$8.2M Series A</span></span>
+            <span class="text-gray-500 text-xs">1 day ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Section - Unique Process Visualization -->
+  <section id="method" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: Process Timeline -->
+        <div>
+          <span class="font-mono text-cyan text-xs uppercase tracking-wider">// The Method</span>
+          <h2 class="text-4xl lg:text-5xl font-bold mt-4 mb-8">
+            14 Days.<br>
+            4 Phases.<br>
+            <span class="text-gradient">1 Goal.</span>
+          </h2>
+
+          <!-- Vertical Timeline -->
+          <div class="space-y-6 relative">
+            <!-- Connecting line -->
+            <div class="absolute left-6 top-8 bottom-8 w-px bg-gradient-to-b from-cyan via-purple to-green-400"></div>
+
+            <!-- Phase 1 -->
+            <div class="flex items-start space-x-6 relative">
+              <div class="relative">
+                <div class="w-12 h-12 rounded-full bg-cyan flex items-center justify-center font-bold text-ink animate-pulse-slow">
+                  01
+                </div>
+              </div>
+              <div class="flex-1 glass-premium rounded-lg p-4 premium-hover">
+                <h3 class="font-bold text-lg mb-1">Deep Dive</h3>
+                <p class="text-gray-400 text-sm">2-hour strategy session. We extract your unfair advantages.</p>
+                <div class="mt-2 text-xs text-cyan font-mono">Days 1-2</div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="flex items-start space-x-6 relative">
+              <div class="relative">
+                <div class="w-12 h-12 rounded-full bg-purple flex items-center justify-center font-bold text-white">
+                  02
+                </div>
+              </div>
+              <div class="flex-1 glass-premium rounded-lg p-4 premium-hover">
+                <h3 class="font-bold text-lg mb-1">Story Architecture</h3>
+                <p class="text-gray-400 text-sm">VC-tested narrative frameworks. No fluff. Pure signal.</p>
+                <div class="mt-2 text-xs text-purple font-mono">Days 3-6</div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="flex items-start space-x-6 relative">
+              <div class="relative">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple to-cyan flex items-center justify-center font-bold text-white">
+                  03
+                </div>
+              </div>
+              <div class="flex-1 glass-premium rounded-lg p-4 premium-hover">
+                <h3 class="font-bold text-lg mb-1">Visual Engineering</h3>
+                <p class="text-gray-400 text-sm">Data viz that makes VCs lean forward. Premium, not pretty.</p>
+                <div class="mt-2 text-xs text-cyan font-mono">Days 7-12</div>
+              </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="flex items-start space-x-6 relative">
+              <div class="relative">
+                <div class="w-12 h-12 rounded-full bg-green-400 flex items-center justify-center font-bold text-ink">
+                  04
+                </div>
+              </div>
+              <div class="flex-1 glass-premium rounded-lg p-4 premium-hover">
+                <h3 class="font-bold text-lg mb-1">Launch Ready</h3>
+                <p class="text-gray-400 text-sm">Final polish. Investor notes. You're armed and dangerous.</p>
+                <div class="mt-2 text-xs text-green-400 font-mono">Days 13-14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Value Stack -->
+        <div>
+          <div class="glass-premium rounded-2xl p-8 border border-white/10">
+            <h3 class="text-2xl font-bold mb-6">You Get Everything</h3>
+
+            <div class="space-y-4">
+              <!-- Value items with progress bars -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-semibold">Investor Narrative</span>
+                  <span class="text-cyan text-sm">$3,000 value</span>
+                </div>
+                <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-cyan to-purple rounded-full transition-all group-hover:animate-pulse" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-semibold">Design System</span>
+                  <span class="text-cyan text-sm">$2,500 value</span>
+                </div>
+                <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-purple to-cyan rounded-full transition-all group-hover:animate-pulse" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-semibold">Data Visualizations</span>
+                  <span class="text-cyan text-sm">$1,500 value</span>
+                </div>
+                <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-cyan to-green-400 rounded-full transition-all group-hover:animate-pulse" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-semibold">Pitch Coaching</span>
+                  <span class="text-cyan text-sm">$2,000 value</span>
+                </div>
+                <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-green-400 to-cyan rounded-full transition-all group-hover:animate-pulse" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-semibold">Investor Database</span>
+                  <span class="text-cyan text-sm">$1,000 value</span>
+                </div>
+                <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-purple to-pink-500 rounded-full transition-all group-hover:animate-pulse" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-cyan/10 rounded-lg border border-cyan/30">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-sm text-gray-400">Total Value</div>
+                  <div class="text-2xl font-bold text-white">$10,000</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm text-gray-400">Your Investment</div>
+                  <div class="text-3xl font-bold text-cyan">$1,997+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualification Form Section -->
+  <section id="qualify" class="py-20 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan/5 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 relative">
+      <div class="text-center mb-12">
+        <span class="font-mono text-cyan text-xs uppercase tracking-wider">// Application</span>
+        <h2 class="text-4xl lg:text-5xl font-bold mt-4 mb-4">
+          Let's See If We're A Fit
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          We only work with 5 founders per month. This ensures every deck gets our A-team.
+        </p>
+      </div>
+
+      <!-- The Form -->
+      <div class="max-w-3xl mx-auto">
+        <div class="glass-premium rounded-2xl p-8 border border-cyan/20">
+          <form id="qualifyForm" class="space-y-6" onsubmit="return handleSubmit(event)">
+
+            <!-- Honeypot -->
+            <input type="text" name="url" class="hidden" tabindex="-1" autocomplete="off">
+
+            <!-- Name & Email Row -->
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Your Name *</label>
+                <input type="text" name="name" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Work Email *</label>
+                <input type="email" name="email" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition">
+              </div>
+            </div>
+
+            <!-- Company & LinkedIn -->
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Company *</label>
+                <input type="text" name="company" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">LinkedIn URL</label>
+                <input type="url" name="linkedin"
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition"
+                  placeholder="https://linkedin.com/in/...">
+              </div>
+            </div>
+
+            <!-- Funding Details -->
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Current Stage *</label>
+                <select name="stage" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition appearance-none">
+                  <option value="">Select...</option>
+                  <option value="pre-seed">Pre-Seed</option>
+                  <option value="seed">Seed</option>
+                  <option value="series-a">Series A</option>
+                  <option value="series-b">Series B</option>
+                  <option value="series-c+">Series C+</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Raise Target *</label>
+                <select name="raise" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition appearance-none">
+                  <option value="">Select...</option>
+                  <option value="500k-1m">$500K-$1M</option>
+                  <option value="1m-3m">$1M-$3M</option>
+                  <option value="3m-5m">$3M-$5M</option>
+                  <option value="5m-10m">$5M-$10M</option>
+                  <option value="10m+">$10M+</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-gray-300">Timeline *</label>
+                <select name="timeline" required
+                  class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition appearance-none">
+                  <option value="">Select...</option>
+                  <option value="asap">ASAP (7 days)</option>
+                  <option value="standard">Standard (14 days)</option>
+                  <option value="flexible">Flexible (30 days)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Budget Selection with Visual Enhancement -->
+            <div>
+              <label class="block text-sm font-medium mb-3 text-gray-300">Investment Budget *</label>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="budget" value="under-2k" class="peer hidden" required>
+                  <div class="p-3 rounded-lg border border-white/10 text-center peer-checked:border-amber-500 peer-checked:bg-amber-500/10 hover:border-white/20 transition">
+                    <span class="text-sm">Under $2K</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="budget" value="2k-4k" class="peer hidden">
+                  <div class="p-3 rounded-lg border border-white/10 text-center peer-checked:border-cyan peer-checked:bg-cyan/10 hover:border-white/20 transition">
+                    <span class="text-sm">$2K-$4K</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="budget" value="4k-7k" class="peer hidden">
+                  <div class="p-3 rounded-lg border border-white/10 text-center peer-checked:border-cyan peer-checked:bg-cyan/10 hover:border-white/20 transition">
+                    <span class="text-sm">$4K-$7K</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="budget" value="7k+" class="peer hidden">
+                  <div class="p-3 rounded-lg border border-white/10 text-center peer-checked:border-green-400 peer-checked:bg-green-400/10 hover:border-white/20 transition">
+                    <span class="text-sm font-semibold">$7K+</span>
+                  </div>
+                </label>
+              </div>
+              <div id="budgetNote" class="hidden mt-3 p-3 rounded-lg bg-amber-500/10 border border-amber-500/30">
+                <p class="text-amber-400 text-sm">
+                  <span class="font-semibold">Note:</span> Our minimum engagement is $1,997. This ensures we can deliver the quality that closes rounds.
+                </p>
+              </div>
+            </div>
+
+            <!-- Context -->
+            <div>
+              <label class="block text-sm font-medium mb-2 text-gray-300">Tell us about your raise</label>
+              <textarea name="context" rows="4"
+                class="w-full bg-void/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20 transition"
+                placeholder="Current traction, target investors, timeline, any specific requirements..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="flex flex-col items-center space-y-4">
+              <button type="submit"
+                class="w-full md:w-auto bg-gradient-to-r from-cyan to-cyan-dark text-ink px-12 py-4 rounded-lg font-bold text-lg premium-hover transition group">
+                <span class="flex items-center justify-center space-x-2">
+                  <span>Lock In Your Spot</span>
+                  <span class="group-hover:translate-x-1 transition">→</span>
+                </span>
+              </button>
+              <p class="text-xs text-gray-500 text-center">
+                🔒 Your information is encrypted and never shared. SOC2 compliant.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Proof Below Form -->
+      <div class="mt-12 text-center">
+        <p class="text-sm text-gray-400 mb-4">Recent clients who closed their rounds:</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="glass-premium rounded-full px-4 py-2 text-xs">
+            <span class="text-gray-400">B2B SaaS •</span>
+            <span class="text-green-400 font-semibold"> $8.2M Series A</span>
+          </div>
+          <div class="glass-premium rounded-full px-4 py-2 text-xs">
+            <span class="text-gray-400">AI/ML •</span>
+            <span class="text-green-400 font-semibold"> $3.5M Seed</span>
+          </div>
+          <div class="glass-premium rounded-full px-4 py-2 text-xs">
+            <span class="text-gray-400">FinTech •</span>
+            <span class="text-green-400 font-semibold"> $15M Series B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Section -->
+  <section id="investment" class="py-20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <span class="font-mono text-cyan text-xs uppercase tracking-wider">// Investment</span>
+      <h2 class="text-4xl lg:text-5xl font-bold mt-4 mb-8">
+        Simple Pricing.<br>
+        <span class="holographic">Exceptional ROI.</span>
+      </h2>
+
+      <!-- Pricing Card -->
+      <div class="max-w-2xl mx-auto">
+        <div class="relative group">
+          <!-- Glow effect -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan via-purple to-cyan rounded-2xl opacity-70 group-hover:opacity-100 blur-lg transition"></div>
+
+          <!-- Card -->
+          <div class="relative glass-premium rounded-2xl p-8 border border-white/20">
+            <div class="text-5xl font-bold mb-2">
+              $1,997<span class="text-2xl text-gray-400">+</span>
+            </div>
+            <p class="text-gray-400 mb-8">Based on complexity & timeline</p>
+
+            <!-- What's Included -->
+            <div class="space-y-3 text-left mb-8">
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">Complete pitch deck (15-20 slides)</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">Investor narrative & messaging</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">Premium design & data viz</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">14-day delivery (rush available)</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">Unlimited revisions during build</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400 mt-1">✓</span>
+                <span class="text-gray-300">All export formats + source files</span>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-cyan mt-1">★</span>
+                <span class="text-cyan">BONUS: Investor database (500+ VCs)</span>
+              </div>
+            </div>
+
+            <a href="#qualify" class="block w-full bg-gradient-to-r from-cyan to-cyan-dark text-ink px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-cyan/30 transition">
+              Apply Now →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROI Calculator -->
+      <div class="mt-16 glass-premium rounded-xl p-6 max-w-xl mx-auto">
+        <h3 class="font-bold text-lg mb-4">Quick ROI Math</h3>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span class="text-gray-400">Your investment:</span>
+            <span class="text-white">$3,000</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">Average raise increase:</span>
+            <span class="text-green-400">+32%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">On a $5M round:</span>
+            <span class="text-cyan font-bold">+$1.6M</span>
+          </div>
+          <div class="pt-2 border-t border-white/10 flex justify-between">
+            <span class="text-gray-400">ROI:</span>
+            <span class="text-green-400 font-bold">533x</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="font-mono text-cyan text-xs uppercase tracking-wider">// FAQ</span>
+        <h2 class="text-4xl font-bold mt-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Items with expand/collapse -->
+        <details class="group glass-premium rounded-lg border border-white/10">
+          <summary class="p-6 cursor-pointer list-none flex justify-between items-center">
+            <span class="font-semibold">Do you sign NDAs?</span>
+            <span class="text-cyan group-open:rotate-45 transition">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400">
+            Yes, always. We sign mutual NDAs before any sensitive information is shared. Your data is encrypted and never shared with third parties.
+          </div>
+        </details>
+
+        <details class="group glass-premium rounded-lg border border-white/10">
+          <summary class="p-6 cursor-pointer list-none flex justify-between items-center">
+            <span class="font-semibold">What if I need it faster than 14 days?</span>
+            <span class="text-cyan group-open:rotate-45 transition">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400">
+            Rush delivery available in 7 days for an additional 50% fee. We maintain the same quality standards, just with a dedicated team working around the clock.
+          </div>
+        </details>
+
+        <details class="group glass-premium rounded-lg border border-white/10">
+          <summary class="p-6 cursor-pointer list-none flex justify-between items-center">
+            <span class="font-semibold">Who actually builds my deck?</span>
+            <span class="text-cyan group-open:rotate-45 transition">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400">
+            Your deck is crafted by our core team of ex-VC analysts, designers who've worked with unicorns, and storytellers who understand what makes investors write checks.
+          </div>
+        </details>
+
+        <details class="group glass-premium rounded-lg border border-white/10">
+          <summary class="p-6 cursor-pointer list-none flex justify-between items-center">
+            <span class="font-semibold">What's your success rate?</span>
+            <span class="text-cyan group-open:rotate-45 transition">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400">
+            87% of our clients successfully close their rounds within 6 months. The other 13% typically pivot or decide to bootstrap.
+          </div>
+        </details>
+
+        <details class="group glass-premium rounded-lg border border-white/10">
+          <summary class="p-6 cursor-pointer list-none flex justify-between items-center">
+            <span class="font-semibold">Can you help with investor intros?</span>
+            <span class="text-cyan group-open:rotate-45 transition">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-400">
+            While we don't make direct intros, every client gets our curated database of 500+ active VCs with contact info, investment thesis, and portfolio details.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="relative">
+        <!-- Background glow -->
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan/20 via-purple/20 to-cyan/20 blur-3xl"></div>
+
+        <div class="relative">
+          <h2 class="text-4xl lg:text-6xl font-bold mb-6">
+            Ready to Raise?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8">
+            Join 2,000+ founders who closed their rounds with our decks.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#qualify" class="bg-gradient-to-r from-cyan to-cyan-dark text-ink px-10 py-4 rounded-lg font-bold text-lg premium-hover group">
+              <span class="flex items-center space-x-2">
+                <span>Start in 48 Hours</span>
+                <span class="group-hover:translate-x-1 transition">→</span>
+              </span>
+            </a>
+            <a href="mailto:hello@pitchdeckwriters.com" class="text-gray-300 hover:text-white px-8 py-4 font-medium transition">
+              or email hello@pitchdeckwriters.com
+            </a>
+          </div>
+
+          <!-- Trust indicators -->
+          <div class="mt-12 flex items-center justify-center space-x-8 text-sm text-gray-500">
+            <div class="flex items-center space-x-2">
+              <span>🔒</span>
+              <span>SOC2</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>🇺🇸</span>
+              <span>US-Based</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>⚡</span>
+              <span>14-Day Guarantee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-sm text-gray-500">
+          © 2024 Pitch Deck Writers. Raising capital since 2009.
+        </div>
+        <div class="flex items-center space-x-6 text-sm">
+          <a href="#" class="text-gray-400 hover:text-cyan transition">Privacy</a>
+          <a href="#" class="text-gray-400 hover:text-cyan transition">Terms</a>
+          <a href="#" class="text-gray-400 hover:text-cyan transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth scroll
+    function scrollToForm() {
+      document.getElementById('qualify').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showProof() {
+      document.getElementById('proof').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Form handling
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      // Check honeypot
+      if (formData.get('url')) {
+        return false;
+      }
+
+      // Get budget value
+      const budget = formData.get('budget');
+      const budgetNote = document.getElementById('budgetNote');
+
+      // Show note for low budgets
+      if (budget === 'under-2k') {
+        budgetNote.classList.remove('hidden');
+        setTimeout(() => {
+          alert('Thank you for your interest. While our minimum is $1,997, we\'ll review your application and see if we can find a solution.');
+        }, 100);
+      } else {
+        budgetNote.classList.add('hidden');
+        alert('Perfect! Expect a strategy call invite within 24 hours.');
+      }
+
+      // Here you would send to your backend
+      console.log('Form submitted:', Object.fromEntries(formData));
+
+      // Reset form
+      form.reset();
+      return false;
+    }
+
+    // Parallax effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallax = document.querySelectorAll('.parallax');
+      parallax.forEach(element => {
+        const speed = element.dataset.speed || 0.5;
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Magnetic button effect
+    document.querySelectorAll('.magnetic').forEach(button => {
+      button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translate(0, 0)';
+      });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-up');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
