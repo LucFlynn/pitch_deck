@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Versions | Pitch Deck Writers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'electric': '#0EA5E9',
+            'cyan': '#00F5FF',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0A0E1B 0%, #1a0b2e 50%, #0F172A 100%);
+      min-height: 100vh;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="text-white antialiased">
+
+  <!-- Header -->
+  <header class="py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-electric to-purple-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">P</span>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Pitch Deck Writers</h1>
+            <p class="text-sm text-gray-400">Landing Page Variations</p>
+          </div>
+        </div>
+        <a href="index.html" class="text-electric hover:text-white transition text-sm">← Back to Main</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Intro -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Choose Your Landing Page</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Multiple design variations to test different aesthetics and conversion approaches.
+          Each maintains core messaging while exploring unique visual directions.
+        </p>
+      </div>
+
+      <!-- Version Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- V0 - Original -->
+        <a href="index.html" class="block">
+          <div class="glass rounded-2xl p-6 card-hover h-full">
+            <div class="mb-4">
+              <div class="inline-flex items-center space-x-2 mb-3">
+                <span class="px-3 py-1 bg-green-500/30 rounded-full text-xs font-semibold">LIVE</span>
+                <span class="px-3 py-1 bg-blue-500/30 rounded-full text-xs">Classic</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">V0: Original</h3>
+              <p class="text-gray-400 text-sm mb-4">Your existing landing page - clean, professional, and proven.</p>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Two-column layout</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Form in hero section</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Simple blue palette</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Traditional structure</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <span class="text-electric font-semibold text-sm">View Original →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- V1 - Premium -->
+        <a href="premium-landing.html" class="block">
+          <div class="glass rounded-2xl p-6 card-hover h-full">
+            <div class="mb-4">
+              <div class="inline-flex items-center space-x-2 mb-3">
+                <span class="px-3 py-1 bg-electric/30 rounded-full text-xs font-semibold">New</span>
+                <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Premium</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">V1: Premium Dark</h3>
+              <p class="text-gray-400 text-sm mb-4">Elevated design with glassmorphism and sophisticated animations.</p>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Dark premium aesthetic</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Glass morphism effects</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Smooth animations</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Mobile-optimized</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <span class="text-electric font-semibold text-sm">View Premium →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- V2 - Cyberpunk -->
+        <a href="premium-landing-v2.html" class="block">
+          <div class="glass rounded-2xl p-6 card-hover h-full">
+            <div class="mb-4">
+              <div class="inline-flex items-center space-x-2 mb-3">
+                <span class="px-3 py-1 bg-cyan/30 rounded-full text-xs font-semibold">Bold</span>
+                <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Creative</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">V2: Cyberpunk</h3>
+              <p class="text-gray-400 text-sm mb-4">Futuristic design with neon accents, 3D effects, and advanced interactions.</p>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Neon cyan theme</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">3D card transforms</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Holographic effects</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-gray-300">Asymmetric layouts</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <span class="text-cyan font-semibold text-sm">View Cyberpunk →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="mt-16 glass rounded-2xl p-8">
+        <h3 class="text-2xl font-bold mb-6">Feature Comparison</h3>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-3 pr-4">Feature</th>
+                <th class="text-center py-3 px-4">V0: Original</th>
+                <th class="text-center py-3 px-4">V1: Premium</th>
+                <th class="text-center py-3 px-4">V2: Cyberpunk</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-300">
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Visual Style</td>
+                <td class="text-center py-3 px-4">Classic</td>
+                <td class="text-center py-3 px-4">Premium Dark</td>
+                <td class="text-center py-3 px-4">Futuristic</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Color Theme</td>
+                <td class="text-center py-3 px-4">Blue (#0EA5E9)</td>
+                <td class="text-center py-3 px-4">Electric Blue</td>
+                <td class="text-center py-3 px-4">Cyan (#00F5FF)</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Animations</td>
+                <td class="text-center py-3 px-4">Basic</td>
+                <td class="text-center py-3 px-4">Smooth</td>
+                <td class="text-center py-3 px-4">Advanced</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Layout</td>
+                <td class="text-center py-3 px-4">Traditional</td>
+                <td class="text-center py-3 px-4">Modern Grid</td>
+                <td class="text-center py-3 px-4">Asymmetric</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Interactivity</td>
+                <td class="text-center py-3 px-4">Standard</td>
+                <td class="text-center py-3 px-4">Enhanced</td>
+                <td class="text-center py-3 px-4">Advanced</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Form Style</td>
+                <td class="text-center py-3 px-4">Sidebar</td>
+                <td class="text-center py-3 px-4">Bordered Card</td>
+                <td class="text-center py-3 px-4">Radio Cards</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-3 pr-4">Visual Effects</td>
+                <td class="text-center py-3 px-4">Minimal</td>
+                <td class="text-center py-3 px-4">Glass</td>
+                <td class="text-center py-3 px-4">Neon + 3D</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4">Best For</td>
+                <td class="text-center py-3 px-4">Conservative</td>
+                <td class="text-center py-3 px-4">Premium</td>
+                <td class="text-center py-3 px-4">Bold/Tech</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="mt-8 glass rounded-xl p-6">
+        <h4 class="font-semibold mb-3">Testing Notes:</h4>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li class="flex items-start">
+            <span class="text-electric mr-2">•</span>
+            <span><strong>V0 (Original)</strong> - Your current working version. Use as baseline for A/B testing.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-electric mr-2">•</span>
+            <span><strong>V1 (Premium)</strong> - More sophisticated design that appeals to higher-budget clients. Best for filtering qualified leads.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-electric mr-2">•</span>
+            <span><strong>V2 (Cyberpunk)</strong> - Most distinctive and memorable. Great for tech-forward brands and standing out in competitive markets.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-electric mr-2">•</span>
+            <span>All versions include form validation, honeypot protection, and mobile responsiveness.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-electric mr-2">•</span>
+            <span>Test each version with your Google Ads traffic to see which converts best for your ideal client profile.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 mt-16 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-sm text-gray-500">
+        Pitch Deck Writers - Landing Page Variations • 2024
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

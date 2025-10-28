@@ -1,296 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page Versions | Pitch Deck Writers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Series A Pitch Deck Agency | Investor-Ready in 14 Days</title>
+  <meta name="description" content="Premium investor pitch decks for funded founders raising Seed to Series B. $12B+ raised since 2009. Book a strategy call." />
+  <meta property="og:title" content="Series A Pitch Deck Agency" />
+  <meta property="og:description" content="Investor-ready decks for funded founders. $12B+ raised." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'electric': '#0EA5E9',
-            'cyan': '#00F5FF',
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { colors: { brand:'#0ea5e9', dark:'#0b1220' } } } }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0A0E1B 0%, #1a0b2e 50%, #0F172A 100%);
-      min-height: 100vh;
-    }
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  </style>
+  <style> body{ font-family: Inter, ui-sans-serif, system-ui; } </style>
 </head>
-<body class="text-white antialiased">
 
-  <!-- Header -->
-  <header class="py-8">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center space-x-3">
-        <div class="w-12 h-12 bg-gradient-to-br from-electric to-purple-600 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-xl">P</span>
-        </div>
-        <div>
-          <h1 class="text-2xl font-bold">Pitch Deck Writers</h1>
-          <p class="text-sm text-gray-400">Landing Page Variations</p>
-        </div>
-      </div>
+<body class="bg-dark text-white antialiased">
+  <!-- Top bar -->
+  <header class="border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-block h-8 w-8 rounded bg-brand/20 ring-1 ring-brand/40"></span>
+        <span class="text-sm font-semibold tracking-widest uppercase">Pitch Deck Writers</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <a href="#proof" class="hover:text-white">Results</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="#apply" class="px-4 py-2 rounded bg-brand text-dark font-semibold hover:bg-sky-400">Book Call</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Intro -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4">Choose Your Landing Page</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto">
-          Multiple design variations to test different aesthetics and conversion approaches.
-          Each maintains core messaging while exploring unique visual directions.
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand/10 to-transparent"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span> For funded founders raising Seed–Series B
+        </div>
+        <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
+          Series A Pitch Decks<br class="hidden sm:block"> That Get Funded
+        </h1>
+        <p class="mt-4 text-lg text-white/80">
+          We build investor-ready decks that articulate traction, story, and path to scale.
+          <span class="font-semibold text-white">Investor-ready in 14 days</span>.
         </p>
-      </div>
 
-      <!-- Version Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul class="mt-6 grid sm:grid-cols-3 gap-4 text-sm">
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4"><span class="text-2xl font-bold">$12B+</span><br><span class="text-white/70">raised since 2009</span></li>
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4"><span class="text-2xl font-bold">2,000+</span><br><span class="text-white/70">decks delivered</span></li>
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4"><span class="text-2xl font-bold">4.9★</span><br><span class="text-white/70">avg client rating</span></li>
+        </ul>
 
-        <!-- V0 - Original -->
-        <a href="v0-original.html" class="block">
-          <div class="glass rounded-2xl p-6 card-hover h-full">
-            <div class="mb-4">
-              <div class="inline-flex items-center space-x-2 mb-3">
-                <span class="px-3 py-1 bg-gray-500/30 rounded-full text-xs font-semibold">Original</span>
-                <span class="px-3 py-1 bg-blue-500/30 rounded-full text-xs">Classic</span>
-              </div>
-              <h3 class="text-2xl font-bold mb-2">V0: Original</h3>
-              <p class="text-gray-400 text-sm mb-4">Your existing landing page - clean, professional, and proven.</p>
-            </div>
-
-            <div class="space-y-2 mb-6">
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Two-column layout</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Form in hero section</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Simple blue palette</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Traditional structure</span>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-white/10">
-              <span class="text-electric font-semibold text-sm">View Original →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- V1 - Premium -->
-        <a href="premium-landing.html" class="block">
-          <div class="glass rounded-2xl p-6 card-hover h-full">
-            <div class="mb-4">
-              <div class="inline-flex items-center space-x-2 mb-3">
-                <span class="px-3 py-1 bg-electric/30 rounded-full text-xs font-semibold">New</span>
-                <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Premium</span>
-              </div>
-              <h3 class="text-2xl font-bold mb-2">V1: Premium Dark</h3>
-              <p class="text-gray-400 text-sm mb-4">Elevated design with glassmorphism and sophisticated animations.</p>
-            </div>
-
-            <div class="space-y-2 mb-6">
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Dark premium aesthetic</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Glass morphism effects</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Smooth animations</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Mobile-optimized</span>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-white/10">
-              <span class="text-electric font-semibold text-sm">View Premium →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- V2 - Cyberpunk -->
-        <a href="premium-landing-v2.html" class="block">
-          <div class="glass rounded-2xl p-6 card-hover h-full">
-            <div class="mb-4">
-              <div class="inline-flex items-center space-x-2 mb-3">
-                <span class="px-3 py-1 bg-cyan/30 rounded-full text-xs font-semibold">Bold</span>
-                <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Creative</span>
-              </div>
-              <h3 class="text-2xl font-bold mb-2">V2: Cyberpunk</h3>
-              <p class="text-gray-400 text-sm mb-4">Futuristic design with neon accents, 3D effects, and advanced interactions.</p>
-            </div>
-
-            <div class="space-y-2 mb-6">
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Neon cyan theme</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">3D card transforms</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Holographic effects</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-green-400 mr-2">✓</span>
-                <span class="text-gray-300">Asymmetric layouts</span>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-white/10">
-              <span class="text-cyan font-semibold text-sm">View Cyberpunk →</span>
-            </div>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Comparison Table -->
-      <div class="mt-16 glass rounded-2xl p-8">
-        <h3 class="text-2xl font-bold mb-6">Feature Comparison</h3>
-
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b border-white/10">
-                <th class="text-left py-3 pr-4">Feature</th>
-                <th class="text-center py-3 px-4">V0: Original</th>
-                <th class="text-center py-3 px-4">V1: Premium</th>
-                <th class="text-center py-3 px-4">V2: Cyberpunk</th>
-              </tr>
-            </thead>
-            <tbody class="text-gray-300">
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Visual Style</td>
-                <td class="text-center py-3 px-4">Classic</td>
-                <td class="text-center py-3 px-4">Premium Dark</td>
-                <td class="text-center py-3 px-4">Futuristic</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Color Theme</td>
-                <td class="text-center py-3 px-4">Blue (#0EA5E9)</td>
-                <td class="text-center py-3 px-4">Electric Blue</td>
-                <td class="text-center py-3 px-4">Cyan (#00F5FF)</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Animations</td>
-                <td class="text-center py-3 px-4">Basic</td>
-                <td class="text-center py-3 px-4">Smooth</td>
-                <td class="text-center py-3 px-4">Advanced</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Layout</td>
-                <td class="text-center py-3 px-4">Traditional</td>
-                <td class="text-center py-3 px-4">Modern Grid</td>
-                <td class="text-center py-3 px-4">Asymmetric</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Interactivity</td>
-                <td class="text-center py-3 px-4">Standard</td>
-                <td class="text-center py-3 px-4">Enhanced</td>
-                <td class="text-center py-3 px-4">Advanced</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Form Style</td>
-                <td class="text-center py-3 px-4">Sidebar</td>
-                <td class="text-center py-3 px-4">Bordered Card</td>
-                <td class="text-center py-3 px-4">Radio Cards</td>
-              </tr>
-              <tr class="border-b border-white/5">
-                <td class="py-3 pr-4">Visual Effects</td>
-                <td class="text-center py-3 px-4">Minimal</td>
-                <td class="text-center py-3 px-4">Glass</td>
-                <td class="text-center py-3 px-4">Neon + 3D</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4">Best For</td>
-                <td class="text-center py-3 px-4">Conservative</td>
-                <td class="text-center py-3 px-4">Premium</td>
-                <td class="text-center py-3 px-4">Bold/Tech</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="mt-8 flex flex-wrap items-center gap-3 text-white/60" id="proof">
+          <span class="text-xs uppercase tracking-widest">Trusted by:</span>
+          <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">YC</span>
+          <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">Techstars</span>
+          <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">MIT</span>
+          <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">500+ VC-backed</span>
         </div>
       </div>
 
-      <!-- Notes -->
-      <div class="mt-8 glass rounded-xl p-6">
-        <h4 class="font-semibold mb-3">Testing Notes:</h4>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li class="flex items-start">
-            <span class="text-electric mr-2">•</span>
-            <span><strong>V0 (Original)</strong> - Your current working version. Use as baseline for A/B testing.</span>
+      <!-- Qualify / Apply form -->
+      <aside id="apply" class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur">
+        <h2 class="text-xl font-bold">Book a Strategy Call</h2>
+        <p class="mt-1 text-sm text-white/70">Only for funded founders or teams actively raising.</p>
+
+        <form id="leadForm" class="mt-6 grid grid-cols-1 gap-4" action="#" method="post" onsubmit="return validateBudget()">
+          <!-- Honeypot -->
+          <input type="text" name="company_website" class="hidden" tabindex="-1" autocomplete="off">
+
+          <label class="block">
+            <span class="text-sm text-white/80">Full name</span>
+            <input required name="name" type="text" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 text-white placeholder-white/40 focus:border-brand focus:outline-none" placeholder="Jane Founder" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm text-white/80">Work email</span>
+            <input required name="email" type="email" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 text-white placeholder-white/40 focus:border-brand focus:outline-none" placeholder="jane@startup.com" />
+          </label>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-white/80">Funding stage</span>
+              <select required name="stage" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 focus:border-brand">
+                <option value="">Select…</option>
+                <option>Pre-Seed</option>
+                <option>Seed</option>
+                <option>Series A</option>
+                <option>Series B</option>
+                <option>Private Equity</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-sm text-white/80">Raise goal (USD)</span>
+              <select required name="raise" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 focus:border-brand">
+                <option value="">Select…</option>
+                <option>$500k–$1.9M</option>
+                <option>$2M–$4.9M</option>
+                <option>$5M–$9.9M</option>
+                <option>$10M+</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="text-sm text-white/80">Timeline</span>
+            <select required name="timeline" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 focus:border-brand">
+              <option value="">Select…</option>
+              <option>ASAP (≤14 days)</option>
+              <option>2–4 weeks</option>
+              <option>4+ weeks</option>
+            </select>
+          </label>
+
+          <label class="block">
+            <span class="text-sm text-white/80">Budget</span>
+            <select required id="budget" name="budget" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 focus:border-brand">
+              <option value="">Select…</option>
+              <option value="1500">$1.5k–$1.9k</option>
+              <option value="2000">$2k–$3.9k</option>
+              <option value="4000">$4k–$6.9k</option>
+              <option value="7000">$7k+</option>
+            </select>
+          </label>
+
+          <label class="block">
+            <span class="text-sm text-white/80">Company URL</span>
+            <input required name="url" type="url" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 text-white placeholder-white/40 focus:border-brand focus:outline-none" placeholder="https://startup.com" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm text-white/80">Anything else?</span>
+            <textarea name="notes" rows="3" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2 text-white placeholder-white/40 focus:border-brand" placeholder="Context, investor meetings, traction…"></textarea>
+          </label>
+
+          <p id="budgetWarn" class="hidden text-amber-300 text-sm">Our projects start at <span class="font-semibold">$1,997</span>. If your budget is below this, we may not be a fit.</p>
+
+          <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 font-semibold text-dark hover:bg-sky-400 transition">
+            Request Strategy Call
+          </button>
+          <p class="text-xs text-white/50">By submitting you agree to be contacted about your project. We never share your info.</p>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Value stack -->
+  <section class="py-12 lg:py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <h3 class="text-2xl font-bold">What you get</h3>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-white/80">
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <span class="font-semibold text-white">Investor Narrative</span>
+            <p class="mt-1 text-sm">Story, traction, market, moat, model, and ask built to VC standards.</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-electric mr-2">•</span>
-            <span><strong>V1 (Premium)</strong> - More sophisticated design that appeals to higher-budget clients. Best for filtering qualified leads.</span>
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <span class="font-semibold text-white">Design System</span>
+            <p class="mt-1 text-sm">Premium visuals, charts, and data layouts that read in 6–8 minutes.</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-electric mr-2">•</span>
-            <span><strong>V2 (Cyberpunk)</strong> - Most distinctive and memorable. Great for tech-forward brands and standing out in competitive markets.</span>
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <span class="font-semibold text-white">Analyst-Level Edits</span>
+            <p class="mt-1 text-sm">Iterative reviews with ex-VC analysts & operators.</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-electric mr-2">•</span>
-            <span>All versions include form validation, honeypot protection, and mobile responsiveness.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-electric mr-2">•</span>
-            <span>Test each version with your Google Ads traffic to see which converts best for your ideal client profile.</span>
+          <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <span class="font-semibold text-white">Speed + Certainty</span>
+            <p class="mt-1 text-sm">Investor-ready in 14 days. Rush options available.</p>
           </li>
         </ul>
       </div>
-
+      <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6">
+        <h4 class="text-xl font-bold">Why founders choose us</h4>
+        <ul class="mt-3 list-disc list-inside text-sm text-white/80 space-y-2">
+          <li>$12B+ in client raises</li>
+          <li>2,000+ decks shipped</li>
+          <li>US-based leadership team</li>
+          <li>Used by YC, Techstars, MIT startups</li>
+        </ul>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-12 lg:py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold">Fast, rigorous process</h3>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <span class="text-brand font-bold">01</span>
+          <h4 class="mt-2 font-semibold">Kickoff</h4>
+          <p class="text-sm text-white/70">Deep-dive on traction, market and milestones.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <span class="text-brand font-bold">02</span>
+          <h4 class="mt-2 font-semibold">Narrative</h4>
+          <p class="text-sm text-white/70">Outline + research. Analyst-level storyline.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <span class="text-brand font-bold">03</span>
+          <h4 class="mt-2 font-semibold">Design</h4>
+          <p class="text-sm text-white/70">Visual system, charts, and data clarity.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <span class="text-brand font-bold">04</span>
+          <h4 class="mt-2 font-semibold">Investor-Ready</h4>
+          <p class="text-sm text-white/70">Final polish + walk-through + export pack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing floor / qualify -->
+  <section id="pricing" class="py-12 lg:py-20 border-t border-white/10">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold">Engagements start at <span class="text-brand">$1,997</span></h3>
+      <p class="mt-2 text-white/70">Scope varies by stage and complexity. This pricing floor helps us stay focused on funded teams.</p>
+      <a href="#apply" class="mt-6 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 font-semibold text-dark hover:bg-sky-400">See if we're a fit</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-12 lg:py-20 border-t border-white/10">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold">FAQ</h3>
+      <div class="mt-6 grid sm:grid-cols-2 gap-6 text-sm text-white/80">
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <h4 class="font-semibold text-white">How fast can we start?</h4>
+          <p class="mt-1">Most projects kick off within 3–5 business days.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <h4 class="font-semibold text-white">Do you sign NDAs?</h4>
+          <p class="mt-1">Yes. We're happy to sign a mutual NDA before sharing materials.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <h4 class="font-semibold text-white">What do you need from us?</h4>
+          <p class="mt-1">Data room or KPIs, product demo, market insights, and founder time for reviews.</p>
+        </div>
+        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+          <h4 class="font-semibold text-white">Do you help with storytelling?</h4>
+          <p class="mt-1">Yes—story, structure, and design are all included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="py-8 mt-16 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-sm text-gray-500">
-        Pitch Deck Writers - Landing Page Variations • 2024
-      </p>
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-white/60">© <span id="y"></span> Pitch Deck Writers. All rights reserved.</p>
+      <div class="text-xs text-white/60">US-based leadership • Privacy-first</div>
     </div>
   </footer>
 
+  <!-- Simple budget validation -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function validateBudget(){
+      const b = document.getElementById('budget').value;
+      const warn = document.getElementById('budgetWarn');
+      if(!b){ warn.classList.remove('hidden'); return false; }
+      if(parseInt(b,10) < 2000){
+        warn.classList.remove('hidden');
+        warn.scrollIntoView({behavior:'smooth',block:'center'});
+        return false; // hard-filter budgets below floor
+      }
+      warn.classList.add('hidden');
+      alert('Form submitted. Hook this up to your form handler or CRM.');
+      return false; // prevent actual submit until you wire it up
+    }
+  </script>
+
+  <!-- Analytics placeholder (replace with your tag) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script> -->
 </body>
 </html>
