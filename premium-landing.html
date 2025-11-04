@@ -80,9 +80,21 @@
       transform: translateY(-2px);
     }
   </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-52K4L2DJ');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body class="bg-midnight text-white antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52K4L2DJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Navigation -->
   <nav class="fixed w-full top-0 z-50 glass border-b border-white/5">
@@ -225,7 +237,7 @@
             <h2 class="text-2xl font-bold mb-2">Apply for Strategy Call</h2>
             <p class="text-gray-400 text-sm mb-6">For funded founders raising Seed to Series B</p>
 
-            <form id="qualificationForm" class="space-y-4" onsubmit="return handleFormSubmit(event)">
+            <form id="qualificationForm" class="space-y-4" action="https://formspree.io/f/xzzklqpq" method="POST" onsubmit="return handleFormSubmit(event)">
               <!-- Honeypot -->
               <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
 
@@ -243,7 +255,7 @@
 
               <div>
                 <label class="block text-sm font-medium mb-2">Company URL *</label>
-                <input type="url" name="company_url" required class="w-full bg-midnight border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-electric focus:outline-none transition" placeholder="https://yourcompany.com">
+                <input type="text" name="company_url" required class="w-full bg-midnight border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-electric focus:outline-none transition" placeholder="yourcompany.com">
               </div>
 
               <div class="grid md:grid-cols-2 gap-4">
@@ -513,30 +525,29 @@
       if (budget === 'under-2k') {
         warning.classList.remove('hidden');
         warning.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-        // Still submit but flag as potentially unqualified
-        setTimeout(() => {
-          alert('Thank you for your interest. Our team will review your application and get back to you within 24 hours.');
-          form.reset();
-          warning.classList.add('hidden');
-        }, 2000);
-
-        return false;
+      } else {
+        warning.classList.add('hidden');
       }
 
-      // Process qualified leads
-      console.log('Form submission:', Object.fromEntries(formData));
-
-      // Here you would integrate with your CRM/webhook
-      // Example:
-      // fetch('https://your-webhook-url.com', {
-      //   method: 'POST',
-      //   body: JSON.stringify(Object.fromEntries(formData)),
-      //   headers: { 'Content-Type': 'application/json' }
-      // });
-
-      alert('Thank you! Expect a call from our team within 24 hours to discuss your deck.');
-      form.reset();
+      // Submit form via AJAX
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert('Thank you! We\'ll be in touch within 24 hours to schedule your strategy call.');
+          window.location.href = 'https://pitchdeckwriter.com';
+        } else {
+          alert('Thanks for submitting! We\'ll be in touch soon.');
+          window.location.href = 'https://pitchdeckwriter.com';
+        }
+      }).catch(error => {
+        alert('Thanks for submitting! We\'ll be in touch soon.');
+        window.location.href = 'https://pitchdeckwriter.com';
+      });
 
       return false;
     }

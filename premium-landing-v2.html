@@ -238,9 +238,21 @@
       transition: transform 0.2s;
     }
   </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-52K4L2DJ');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body class="bg-void text-white antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52K4L2DJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Animated Background Elements -->
   <div class="fixed inset-0 -z-10">
@@ -692,7 +704,7 @@
       <!-- The Form -->
       <div class="max-w-3xl mx-auto">
         <div class="glass-premium rounded-2xl p-8 border border-cyan/20">
-          <form id="qualifyForm" class="space-y-6" onsubmit="return handleSubmit(event)">
+          <form id="qualifyForm" class="space-y-6" action="https://formspree.io/f/xzzklqpq" method="POST" onsubmit="return handleSubmit(event)">
 
             <!-- Honeypot -->
             <input type="text" name="url" class="hidden" tabindex="-1" autocomplete="off">
@@ -1072,6 +1084,7 @@
     // Form handling
     function handleSubmit(event) {
       event.preventDefault();
+
       const form = event.target;
       const formData = new FormData(form);
 
@@ -1087,19 +1100,30 @@
       // Show note for low budgets
       if (budget === 'under-2k') {
         budgetNote.classList.remove('hidden');
-        setTimeout(() => {
-          alert('Thank you for your interest. While our minimum is $1,997, we\'ll review your application and see if we can find a solution.');
-        }, 100);
       } else {
         budgetNote.classList.add('hidden');
-        alert('Perfect! Expect a strategy call invite within 24 hours.');
       }
 
-      // Here you would send to your backend
-      console.log('Form submitted:', Object.fromEntries(formData));
+      // Submit form via AJAX
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert('Thank you! We\'ll be in touch within 24 hours to schedule your strategy call.');
+          window.location.href = 'https://pitchdeckwriter.com';
+        } else {
+          alert('Thanks for submitting! We\'ll be in touch soon.');
+          window.location.href = 'https://pitchdeckwriter.com';
+        }
+      }).catch(error => {
+        alert('Thanks for submitting! We\'ll be in touch soon.');
+        window.location.href = 'https://pitchdeckwriter.com';
+      });
 
-      // Reset form
-      form.reset();
       return false;
     }
 
