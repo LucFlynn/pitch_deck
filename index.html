@@ -97,63 +97,100 @@
         </ul>
       </div>
 
-      <!-- Simplified Lead Form -->
+      <!-- Two-Step Lead Form -->
       <aside id="apply" class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur sticky top-8">
         <h2 class="text-2xl font-bold">Get the Playbook Now</h2>
 
-        <form id="leadForm" class="mt-6 grid grid-cols-1 gap-4" action="https://formspree.io/f/xzzklqpq" method="POST" onsubmit="return submitForm()">
+        <form id="leadForm" class="mt-6" action="https://formspree.io/f/xzzklqpq" method="POST" onsubmit="return submitForm()">
           <!-- Honeypot -->
           <input type="text" name="company_website" class="hidden" tabindex="-1" autocomplete="off">
 
-          <label class="block">
-            <span class="text-sm font-medium text-white/80">Name *</span>
-            <input required name="name" type="text" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand" placeholder="Your name" />
-          </label>
+          <!-- Step 1 -->
+          <div id="step1" class="grid grid-cols-1 gap-4">
+            <label class="block">
+              <span class="text-sm font-medium text-white/80">Name *</span>
+              <input required name="name" type="text" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand" placeholder="Your name" />
+            </label>
 
-          <label class="block">
-            <span class="text-sm font-medium text-white/80">Email *</span>
-            <input required name="email" type="email" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand" placeholder="you@startup.com" />
-          </label>
+            <label class="block">
+              <span class="text-sm font-medium text-white/80">Email *</span>
+              <input required name="email" type="email" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand" placeholder="you@startup.com" />
+            </label>
 
-          <label class="block">
-            <span class="text-sm font-medium text-white/80">Funding Stage *</span>
-            <select required name="fundingStage" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand">
-              <option value="">Select...</option>
-              <option value="pre-seed">Pre-Seed (Idea stage)</option>
-              <option value="seed">Seed ($500K-$2M)</option>
-              <option value="series-a">Series A ($2M-$15M)</option>
-              <option value="series-b-plus">Series B+ ($15M+)</option>
-              <option value="other">Other/Not fundraising yet</option>
-            </select>
-            <span class="text-xs text-white/50 mt-1.5 block">Helps us send the most relevant resources</span>
-          </label>
+            <label class="block">
+              <span class="text-sm font-medium text-white/80">Funding Stage *</span>
+              <select required name="fundingStage" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand">
+                <option value="">Select...</option>
+                <option value="pre-seed">Pre-Seed (Idea stage)</option>
+                <option value="seed">Seed ($500K-$2M)</option>
+                <option value="series-a">Series A ($2M-$15M)</option>
+                <option value="series-b-plus">Series B+ ($15M+)</option>
+                <option value="other">Other/Not fundraising yet</option>
+              </select>
+              <span class="text-xs text-white/50 mt-1.5 block">Helps us send the most relevant resources</span>
+            </label>
 
-          <label class="block">
-            <span class="text-sm font-medium text-white/80">Company Name or Website (Optional)</span>
-            <input name="company" type="text" class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand" placeholder="YourStartup.com or 'Stealth Mode'" />
-            <span class="text-xs text-white/50 mt-1.5 block">For your personalized deck review</span>
-          </label>
+            <button type="button" onclick="goToStep2()" class="mt-4 w-full inline-flex items-center justify-center rounded-md bg-brand px-6 py-4 text-lg font-bold text-dark hover:bg-sky-400 transition-colors shadow-lg shadow-brand/20">
+              Continue →
+            </button>
 
-          <button type="submit" class="mt-4 w-full inline-flex items-center justify-center rounded-md bg-brand px-6 py-4 text-lg font-bold text-dark hover:bg-sky-400 transition-colors shadow-lg shadow-brand/20">
-            Get the Playbook Now
-          </button>
+            <div class="mt-4 space-y-2 text-sm text-white/70">
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>Instant download</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>No credit card</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>No sales pitch—just honest feedback</span>
+              </p>
+            </div>
 
-          <div class="mt-4 space-y-2 text-sm text-white/70">
-            <p class="flex items-start gap-2">
-              <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
-              <span>Instant download</span>
-            </p>
-            <p class="flex items-start gap-2">
-              <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
-              <span>No credit card</span>
-            </p>
-            <p class="flex items-start gap-2">
-              <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
-              <span>No sales pitch—just honest feedback</span>
-            </p>
+            <p class="mt-4 text-xs text-center text-white/50">🔒 Your info is never shared. We respond within 10 minutes during business hours.</p>
           </div>
 
-          <p class="mt-4 text-xs text-center text-white/50">🔒 Your info is never shared. We respond within 10 minutes during business hours.</p>
+          <!-- Step 2 -->
+          <div id="step2" class="hidden grid grid-cols-1 gap-4">
+            <button type="button" onclick="goToStep1()" class="text-sm text-white/60 hover:text-white flex items-center gap-1 mb-2">
+              ← Back
+            </button>
+
+            <label class="block">
+              <span class="text-sm font-medium text-white/80">What's the #1 question you want answered about your pitch deck or raise? *</span>
+              <textarea
+                id="projectInfo"
+                name="projectInfo"
+                rows="4"
+                required
+                class="mt-1 w-full rounded-md border border-white/10 bg-dark px-3 py-2.5 text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand resize-none"
+                placeholder="e.g., Not getting investor replies, don't know if deck is VC-ready, not sure how to show traction, etc."
+              ></textarea>
+            </label>
+
+            <button type="submit" class="mt-4 w-full inline-flex items-center justify-center rounded-md bg-brand px-6 py-4 text-lg font-bold text-dark hover:bg-sky-400 transition-colors shadow-lg shadow-brand/20">
+              Get the Playbook Now
+            </button>
+
+            <div class="mt-4 space-y-2 text-sm text-white/70">
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>Instant download</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>No credit card</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                <span>No sales pitch—just honest feedback</span>
+              </p>
+            </div>
+
+            <p class="mt-4 text-xs text-center text-white/50">🔒 Your info is never shared. We respond within 10 minutes during business hours.</p>
+          </div>
         </form>
       </aside>
     </div>
@@ -452,6 +489,28 @@
   <!-- Form submission script -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    function goToStep2() {
+      // Validate step 1 fields
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const stage = document.querySelector('select[name="fundingStage"]').value;
+
+      if (!name || !email || !stage) {
+        alert('Please fill out all required fields');
+        return;
+      }
+
+      // Show step 2, hide step 1
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+    }
+
+    function goToStep1() {
+      // Show step 1, hide step 2
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('step1').classList.remove('hidden');
+    }
 
     function submitForm(){
       // Submit form via AJAX to avoid Formspree redirect
