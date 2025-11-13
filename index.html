@@ -517,6 +517,14 @@
       const form = document.getElementById('leadForm');
       const formData = new FormData(form);
 
+      // Push form submission event to dataLayer for GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'formSub',
+        'fundingStage': formData.get('fundingStage'),
+        'formName': 'Series A Playbook Lead Form'
+      });
+
       fetch(form.action, {
         method: 'POST',
         body: formData,
